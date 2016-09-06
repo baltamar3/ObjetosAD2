@@ -14,9 +14,13 @@ public class Fraccionario {
     private int numerador;
     private int denominador;
 
-    public Fraccionario(int numerador,int denominador) {
+    public Fraccionario(int numerador,int denominador) throws DenominadorCeroException {
         this.numerador=numerador;
         this.denominador=denominador;
+        
+        if(denominador==0){
+            throw  new DenominadorCeroException();
+        }
     }
 
     public int getNumerador() {
@@ -35,7 +39,7 @@ public class Fraccionario {
         this.denominador = denominador;
     }
     
-    public Fraccionario sumar(Fraccionario f2){
+    public Fraccionario sumar(Fraccionario f2) throws DenominadorCeroException{
         Fraccionario f;
         int num,den;
         
@@ -45,7 +49,7 @@ public class Fraccionario {
         return f;
     }
     
-    public Fraccionario Resta(Fraccionario f2){
+    public Fraccionario Resta(Fraccionario f2) throws DenominadorCeroException{
         Fraccionario f;
         int num,den;
         
