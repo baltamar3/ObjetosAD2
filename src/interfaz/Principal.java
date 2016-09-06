@@ -41,7 +41,7 @@ public class Principal extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         txtDenominador3 = new javax.swing.JTextField();
         cmdCalcular = new javax.swing.JButton();
-        cmdBorrar = new javax.swing.JButton();
+        cmdLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,10 +64,15 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.add(txtDenominador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 60, -1));
 
         cmdCalcular.setText("Calcular");
+        cmdCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdCalcularActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdCalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, -1));
 
-        cmdBorrar.setText("Borrar");
-        jPanel1.add(cmdBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 70, -1));
+        cmdLimpiar.setText("Limpiar");
+        jPanel1.add(cmdLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 70, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,6 +88,10 @@ public class Principal extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
+     
+    }//GEN-LAST:event_cmdCalcularActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,8 +130,8 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox cmbOperacion;
-    private javax.swing.JButton cmdBorrar;
     private javax.swing.JButton cmdCalcular;
+    private javax.swing.JButton cmdLimpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
